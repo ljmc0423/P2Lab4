@@ -19,8 +19,9 @@ public class FrameFijo extends JFrame implements ActionListener{
      private JTextField azar;
      private String palabra;
     
-    public FrameFijo(String palabra) {
-        this.palabra = palabra;
+    public FrameFijo() {
+        
+        palabra= JOptionPane.showInputDialog(null,"Ingrese una palabra");
         JuegoAhorcadoFijo jugar=new JuegoAhorcadoFijo(palabra);
         
         setTitle("Juego");

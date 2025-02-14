@@ -10,15 +10,11 @@ package lab4;
  */
 import java.util.Random;
 
-public class JuegoAhorcadoAzar extends JuegoAhorcadoBase {
-    public String[] palabrasAzar=new String[50];
-    
-    AdminPalabrasSecretas aps=new AdminPalabrasSecretas();
+public class JuegoAhorcadoAzar extends JuegoAhorcadoBase{
 
     public JuegoAhorcadoAzar() {
-        palabrasAzar=aps.getPalabrasSecretas();
         Random azar=new Random();
-        this.palabraSecreta=palabrasAzar[azar.nextInt(palabrasAzar.length)];
+        this.palabraSecreta=AdminPalabrasSecretas.palabrasSecretas[azar.nextInt(AdminPalabrasSecretas.palabrasSecretas.length)];
         this.palabraActual="_".repeat(palabraSecreta.length());
     }
 

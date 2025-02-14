@@ -8,6 +8,6 @@ package lab4;
  *
  * @author ljmc2
  */
-public class JuegoAhorcadoAzar {
+public class JuegoAhorcadoAzar extends JuegoAhorcadoBase{
     
 }

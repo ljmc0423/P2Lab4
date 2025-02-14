@@ -10,4 +10,7 @@ package lab4;
  */
 interface JuegoAhorcado {
     
+    public abstract void inicializarPalabraSecreta();
+    public abstract void jugar();
+    
 }

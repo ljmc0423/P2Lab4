@@ -8,6 +8,14 @@ package lab4;
  *
  * @author ljmc2
  */
-public abstract class JuegoAhorcadoBase {
+public abstract class JuegoAhorcadoBase implements JuegoAhorcado {
+    
+    protected String palabraSecreta;
+    protected String palabraActual;
+    protected int intentos;
+    
+    public abstract void actualizarPalabraActual(char letra);
+    public abstract void verificarLetra(char letra);
+    public abstract void hasGanado();
     
 }

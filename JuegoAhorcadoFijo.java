@@ -8,6 +8,8 @@ package lab4;
  *
  * @author ljmc2
  */
-public class JuegoAhorcadoFijo {
-    
+public class JuegoAhorcadoFijo extends JuegoAhorcadoBase{
+    public JuegoAhorcadoFijo(String palabraSecreta){
+        
+    }
 }

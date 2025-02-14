@@ -18,10 +18,13 @@ public abstract class JuegoAhorcadoBase implements JuegoAhorcado {
     public JuegoAhorcadoBase() {
         this.intentos=5;
     }
-
+    public String getPalabraActual() {
+    return palabraActual;
+     }
     public abstract void actualizarPalabraActual(char letra);
     public abstract boolean verificarLetra(char letra);
     public abstract boolean hasGanado();
+    
     
     @Override
     public void inicializarPalabraSecreta(){

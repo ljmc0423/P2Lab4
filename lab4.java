@@ -41,7 +41,7 @@ public class lab4 extends JFrame implements ActionListener {
          this.dispose();
           new FrameFijo();    
         } else if (e.getSource() == jugaralazar) {
-           new FrameAzar();
+           new AdminAzar();
            this.dispose();
         } else if (e.getSource() == salir) {
             System.exit(0);

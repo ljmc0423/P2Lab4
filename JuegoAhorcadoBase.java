@@ -4,6 +4,7 @@
  */
 package lab4;
 import java.util.Scanner;
+import javax.swing.JOptionPane;
 /**
  *
  * @author ljmc2
@@ -32,11 +33,10 @@ public abstract class JuegoAhorcadoBase implements JuegoAhorcado {
         Scanner lea=new Scanner(System.in).useDelimiter("\n");
         
         while(intentos>0&&!hasGanado()){
-            System.out.println("Palabra actual: "+palabraActual);
-            System.out.println("Intentos restantes: "+intentos);
-            System.out.print("Ingresa una letra: ");
-            char letra=lea.next().charAt(0);
-            
+            JOptionPane.showMessageDialog(null, "Palabra actual: "+palabraActual);
+            JOptionPane.showMessageDialog(null,"Intentos restantes: "+intentos);
+             char letra=JOptionPane.showInputDialog(null,"Ingresa una letra: ").charAt(0);
+           
             if (verificarLetra(letra)) {
                 actualizarPalabraActual(letra);
             } else {

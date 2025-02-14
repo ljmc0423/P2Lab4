@@ -9,7 +9,8 @@ public class lab4 extends JFrame implements ActionListener {
     private JButton jugarfijo, jugaralazar, salir;
     
     public lab4() {
-
+       
+        
         setTitle("Juego");
         setSize(500, 500);
         setLocationRelativeTo(null);
@@ -17,17 +18,17 @@ public class lab4 extends JFrame implements ActionListener {
         setLayout(null);
         
         jugarfijo = new JButton("Jugar Ahoracado Fijo");
-        jugarfijo.setBounds(170, 160, 150, 30);
+        jugarfijo.setBounds(170, 160, 170, 30);
         jugarfijo.addActionListener(this);
         add(jugarfijo);
         
-        jugaralazar = new JButton("Jugar  Ahorcadoal azar");
-        jugaralazar.setBounds(170, 200, 150, 30);
+        jugaralazar = new JButton("Jugar Ahorcado al azar");
+        jugaralazar.setBounds(170, 200, 170, 30);
         jugaralazar.addActionListener(this);
         add(jugaralazar);
         
         salir = new JButton("Salir");
-        salir.setBounds(170, 240, 150, 30);
+        salir.setBounds(170, 240, 170, 30);
         salir.addActionListener(this);
         add(salir);
         
@@ -37,9 +38,11 @@ public class lab4 extends JFrame implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == jugarfijo) {
-
+         this.dispose();
+          new FrameFijo();    
         } else if (e.getSource() == jugaralazar) {
-
+           new FrameAzar();
+           this.dispose();
         } else if (e.getSource() == salir) {
             System.exit(0);
         }

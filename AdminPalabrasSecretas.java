@@ -1,8 +1,7 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package lab4;
+
+import java.util.Random;
 
 /**
  *
@@ -10,4 +9,25 @@ package lab4;
  */
 public class AdminPalabrasSecretas {
     
+    protected String[] palabrasSecretas = new String[50];
+
+    public String[] getPalabrasSecretas() {
+        return palabrasSecretas;
+    }
+    
+    public void añadirPalabra(String palabra) {
+        for (int i = 0; i < palabrasSecretas.length; i++) {
+            if(palabrasSecretas[i] == null) {
+                palabrasSecretas[i] = palabra;
+            }
+        }
+    }
+    
+    public String palabrasAlAzar() {
+        Random alAzar = new Random();
+        int min = 0;
+        int max= palabrasSecretas.length;
+        int randomNumber = alAzar.nextInt(max - min + 1) + min;
+        return palabrasSecretas[randomNumber];
+    }
 }

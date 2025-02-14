@@ -8,6 +8,38 @@ package lab4;
  *
  * @author ljmc2
  */
-public class JuegoAhorcadoAzar extends JuegoAhorcadoBase{
+import java.util.Random;
+
+public class JuegoAhorcadoAzar extends JuegoAhorcadoBase {
+    public String[] palabrasAzar=new String[50];
     
+    AdminPalabrasSecretas aps=new AdminPalabrasSecretas();
+
+    public JuegoAhorcadoAzar() {
+        palabrasAzar=aps.getPalabrasSecretas();
+        Random azar=new Random();
+        this.palabraSecreta=palabrasAzar[azar.nextInt(palabrasAzar.length)];
+        this.palabraActual="_".repeat(palabraSecreta.length());
+    }
+
+    @Override
+    public void actualizarPalabraActual(char letra){
+        StringBuilder sb = new StringBuilder(palabraActual);
+        for(int i=0;i<palabraSecreta.length(); i++){
+            if(palabraSecreta.charAt(i)==letra){
+                sb.setCharAt(i,letra);
+            }
+        }
+        palabraActual=sb.toString();
+    }
+
+    @Override
+    public boolean verificarLetra(char letra){
+        return palabraSecreta.indexOf(letra)>=0;
+    }
+
+    @Override
+    public boolean hasGanado(){
+        return palabraActual.equals(palabraSecreta);
+    }
 }

@@ -9,8 +9,8 @@ import java.util.Random;
  */
 public class AdminPalabrasSecretas {
     
-    protected String[] palabrasSecretas = new String[50];
-
+    private String[] palabrasSecretas = new String[50];
+    public static int contadorListaAzar=0;
     public String[] getPalabrasSecretas() {
         return palabrasSecretas;
     }
@@ -19,6 +19,7 @@ public class AdminPalabrasSecretas {
         for (int i = 0; i < palabrasSecretas.length; i++) {
             if(palabrasSecretas[i] == null) {
                 palabrasSecretas[i] = palabra;
+                contadorListaAzar++;
             }
         }
     }

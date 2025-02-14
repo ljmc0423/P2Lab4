@@ -40,10 +40,10 @@ public class FrameFijo extends JFrame implements ActionListener {
         });
         add(letraInput);
         
-        confirmar = new JButton("Confirmar Letra");
-        confirmar.setBounds(170, 230, 170, 30);
-        confirmar.addActionListener(this);
-        add(confirmar);
+//        confirmar = new JButton("Confirmar Letra");
+//        confirmar.setBounds(170, 230, 170, 30);
+//        confirmar.addActionListener(this);
+//        add(confirmar);
         
     
         regresar = new JButton("Regresar Menu");

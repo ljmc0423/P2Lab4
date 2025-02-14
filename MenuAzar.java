@@ -38,13 +38,21 @@ public class MenuAzar extends JFrame implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == jugaralazar) {
+            if(AdminPalabrasSecretas.palabrasSecretas[0]==null){
+                JOptionPane.showMessageDialog(null, "Lista de palabras vacía, favor añada", "Error", JOptionPane.INFORMATION_MESSAGE);
+                new MenuAzar();
+                this.dispose();
+            }else{
+                
          this.dispose();
           new FrameAzar();    
+            }
         } else if (e.getSource() == anadirazar) {
            new  AdminAzar();
            this.dispose();
         } else if (e.getSource() == regresar) {
-            System.exit(0);
+            new lab4();
+            this.dispose();
         }
     }
     

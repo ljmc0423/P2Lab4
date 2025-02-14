@@ -14,7 +14,7 @@ public class JuegoAhorcadoAzar extends JuegoAhorcadoBase{
 
     public JuegoAhorcadoAzar() {
         Random azar=new Random();
-        this.palabraSecreta=AdminPalabrasSecretas.palabrasSecretas[azar.nextInt(AdminPalabrasSecretas.palabrasSecretas.length)];
+        this.palabraSecreta=AdminPalabrasSecretas.palabrasSecretas[0];
         this.palabraActual="_".repeat(palabraSecreta.length());
     }
 

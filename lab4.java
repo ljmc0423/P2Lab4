@@ -22,7 +22,7 @@ public class lab4 extends JFrame implements ActionListener {
         jugarfijo.addActionListener(this);
         add(jugarfijo);
         
-        jugaralazar = new JButton("Jugar Ahorcado al azar");
+        jugaralazar = new JButton("Menu Ahorcado al azar");
         jugaralazar.setBounds(170, 200, 170, 30);
         jugaralazar.addActionListener(this);
         add(jugaralazar);
@@ -41,7 +41,7 @@ public class lab4 extends JFrame implements ActionListener {
          this.dispose();
           new FrameFijo();    
         } else if (e.getSource() == jugaralazar) {
-           new AdminAzar();
+           new MenuAzar();
            this.dispose();
         } else if (e.getSource() == salir) {
             System.exit(0);
